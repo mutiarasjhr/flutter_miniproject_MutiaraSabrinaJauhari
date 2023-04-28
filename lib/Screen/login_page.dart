@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:yourmuaa/Screen/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -30,10 +31,10 @@ class _LoginPageState extends State<LoginPage> {
     newUser = loginData.getBool('login') ?? true;
 
     if (newUser == false) {
-      // Navigator.pushAndRemoveUntil(
-      //     context,
-      //     MaterialPageRoute(builder: (context) => const HomePage()),
-      //     (route) => false);
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => const HomePage()),
+          (route) => false);
     }
   }
 
@@ -94,19 +95,19 @@ class _LoginPageState extends State<LoginPage> {
                         loginData.setString('email', email);
                         loginData.setString('password', password);
                         if (isValid) {
-                          // Navigator.pushAndRemoveUntil(
-                          //     context,
-                          //     PageRouteBuilder(
-                          //       transitionDuration: const Duration(seconds: 1),
-                          //       pageBuilder:
-                          //           (context, animation, secondaryAnimation) =>
-                          //               const HomePage(),
-                          //       transitionsBuilder: (context, animation,
-                          //           secondaryAnimation, child) {
-                          //         return SlideInUp(child: child);
-                          //       },
-                          //     ),
-                          //     (route) => false);
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              PageRouteBuilder(
+                                transitionDuration: const Duration(seconds: 1),
+                                pageBuilder:
+                                    (context, animation, secondaryAnimation) =>
+                                        const HomePage(),
+                                transitionsBuilder: (context, animation,
+                                    secondaryAnimation, child) {
+                                  return SlideInUp(child: child);
+                                },
+                              ),
+                              (route) => false);
                         }
                       }),
                 ),
