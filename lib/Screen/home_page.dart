@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:yourmuaa/Screen/login_page.dart';
+import 'package:yourmuaa/Screen/bookingmua.dart';
+import 'package:yourmuaa/data_layanan.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,11 +27,44 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(),
-      ),
-      // bottomNavigationBar: const BottomBar(),
+          child: Container(
+        padding: const EdgeInsets.all(15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const BookingPage()),
+                );
+              },
+              child: SizedBox(
+                height: 1000,
+                child: ListView.builder(
+                  itemCount: layanan.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child:
+                                Image.asset(layanan[index], fit: BoxFit.cover),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+            )
+          ],
+        ),
+      )),
     );
+    // bottomNavigationBar: const BottomBar();
   }
 }
 
