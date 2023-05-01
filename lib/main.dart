@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yourmuaa/Screen/bookingmua.dart';
 import 'package:yourmuaa/Screen/home_page.dart';
 import 'package:yourmuaa/Screen/login_page.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +23,6 @@ class MyApp extends StatelessWidget {
         // '/booking': (context) => BookingPage(),
         // '/specialist': (context) => SpecialistPage()
       },
-      // home: LoginPage(),
     );
   }
 }
