@@ -3,31 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:yourmuaa/Screen/specialistmua.dart';
 
-// class SpecialistPage extends StatefulWidget {
-//   const SpecialistPage({super.key});
-
-//   @override
-//   State<SpecialistPage> createState() => _SpecialistPageState();
-// }
-
-// class _SpecialistPageState extends State<SpecialistPage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         backgroundColor: Color.fromARGB(255, 125, 141, 135),
-//         title: Text('Booking Your Make-Up Artist',
-//             style: GoogleFonts.aleo(
-//                 fontSize: 20,
-//                 fontStyle: FontStyle.italic,
-//                 fontWeight: FontWeight.w500,
-//                 color: Colors.white)),
-//         centerTitle: true,
-//       ),
-//     );
-//   }
-// }
-
 class BookingPage extends StatefulWidget {
   const BookingPage({super.key});
 
