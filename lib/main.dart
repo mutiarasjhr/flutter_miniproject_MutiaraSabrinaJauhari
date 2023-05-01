@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yourmuaa/Screen/bookingmua.dart';
 import 'package:yourmuaa/Screen/home_page.dart';
 import 'package:yourmuaa/Screen/login_page.dart';
 
@@ -17,7 +18,6 @@ class MyApp extends StatelessWidget {
         '/': (context) => LoginPage(),
         '/home': (context) => HomePage(),
       },
-      // home: LoginPage(),
     );
   }
 }
