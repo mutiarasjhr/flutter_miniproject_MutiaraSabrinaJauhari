@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 import 'package:yourmuaa/model/mua.dart';
 
@@ -16,6 +15,18 @@ class ApiMua {
           body.map((e) => Specialist.fromJson(e)).toList();
       print(specialists);
       return specialists;
+    } else {
+      throw "Can't get the data";
+    }
+  }
+
+  static Future<Specialist> getSpecialistById(String id) async {
+    final response = await http.get(Uri.parse('$baseUrl$specialists/$id'));
+    if (response.statusCode == 200) {
+      final dynamic body = jsonDecode(response.body);
+      print('Body: $body');
+      final Specialist specialist = Specialist.fromJson(body);
+      return specialist;
     } else {
       throw "Can't get the data";
     }

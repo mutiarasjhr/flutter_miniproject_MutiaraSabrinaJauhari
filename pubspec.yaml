@@ -42,6 +42,7 @@ dependencies:
   provider: ^6.0.5
   intl: ^0.18.1
   http: ^0.13.6
+  # carousel_slider: ^4.0.0
 
 dev_dependencies:
   flutter_test:
@@ -67,10 +68,28 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/graduation.jpg
-    - assets/party.jpg
-    - assets/pre-wed.jpg
+    - assets/allin.jpg
     - assets/wedding.jpg
+    - assets/1.jpg
+    - assets/a.jpg
+    - assets/b.jpg
+    - assets/c.jpg
+    - assets/d.jpg
+    - assets/e.jpg
+    - assets/f.jpg
+    - assets/g.jpg
+    - assets/i.jpg
+    - assets/j.jpg
+    - assets/k.jpg
+    - assets/l.jpg
+    - assets/m.jpg
+    - assets/n.jpg
+    - assets/o.jpg
+    
+
+    
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

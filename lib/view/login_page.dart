@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animate_do/animate_do.dart';
-import 'package:yourmuaa/Screen/home_page.dart';
+import 'package:yourmuaa/view/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -207,7 +207,7 @@ class _LoginPageState extends State<LoginPage> {
                   TextFormField(
                     controller: passwordController,
                     validator: (value) {
-                      if (passwordController.text.length <= 8) {
+                      if (passwordController.text.length < 8) {
                         return "Password minimal 8 karakter";
                       }
                     },

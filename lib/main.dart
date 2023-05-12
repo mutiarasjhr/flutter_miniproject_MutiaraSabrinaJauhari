@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:yourmuaa/Screen/bookingmua.dart';
-import 'package:yourmuaa/Screen/home_page.dart';
-import 'package:yourmuaa/Screen/login_page.dart';
+import 'package:yourmuaa/view/bookingmua.dart';
+import 'package:yourmuaa/view/home_page.dart';
+import 'package:yourmuaa/view/login_page.dart';
 import 'package:provider/provider.dart';
-import 'package:yourmuaa/view_model/provider.dart';
-import 'Screen/bookingmua.dart';
+import 'package:yourmuaa/view_model/muaprovider.dart';
+import 'view/bookingmua.dart';
 import 'package:provider/provider.dart';
 
 void main() {

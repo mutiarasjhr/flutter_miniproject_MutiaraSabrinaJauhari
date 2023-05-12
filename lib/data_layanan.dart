@@ -1,6 +1,7 @@
-List layanan = [
-  "assets/graduation.jpg",
-  "assets/party.jpg",
-  "assets/pre-wed.jpg",
-  "assets/wedding.jpg"
+List layanan = ["assets/allin.jpg", "assets/wedding.jpg"];
+
+List mua1 = [
+  "assets/a.jpg",
+  "assets/b.jpg",
+  "assets/d.jpg",
 ];

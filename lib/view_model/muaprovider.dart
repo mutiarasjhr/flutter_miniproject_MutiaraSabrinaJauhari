@@ -8,6 +8,9 @@ class MuaProvider extends ChangeNotifier {
   List<Specialist> _listmua = [];
   List<Specialist> get listmua => _listmua;
 
+  Specialist? _specialist;
+  Specialist? get specialist => _specialist;
+
   RequestState _requestState = RequestState.empty;
   RequestState get requestState => _requestState;
 
@@ -21,11 +24,30 @@ class MuaProvider extends ChangeNotifier {
       final result = await ApiMua.getSpecialist();
       _listmua = result;
       _requestState = RequestState.loaded;
+      print(_listmua);
       notifyListeners();
     } catch (e) {
       _requestState = RequestState.error;
       _message = 'Error: $e';
       notifyListeners();
     }
+  }
+
+  Future<void> fetchSingleMua(String id) async {
+    print('call');
+    _requestState = RequestState.loading;
+    // notifyListeners();
+    try {
+      final result = await ApiMua.getSpecialistById(id);
+      _specialist = result;
+      print('Result: $result');
+      _requestState = RequestState.loaded;
+      notifyListeners();
+    } catch (e) {
+      _requestState = RequestState.error;
+      _message = 'Error: $e';
+      notifyListeners();
+    }
+    notifyListeners();
   }
 }
