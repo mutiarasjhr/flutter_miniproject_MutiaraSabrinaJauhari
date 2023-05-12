@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:yourmuaa/view/bookingmua.dart';
-import 'package:yourmuaa/data_layanan.dart';
 import 'package:yourmuaa/model/mua.dart';
 import 'package:yourmuaa/view_model/muaprovider.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -58,7 +57,6 @@ class _DetailMuaPageState extends State<DetailMuaPage> {
                       final mua = muaprov.specialist;
                       muaprov.fetchSingleMua(widget.byId.toString());
                       if (mua != null) {
-                        final Image = mua.portofolio.length;
                         return Column(
                           children: [
                             aboutMua(context, mua),
@@ -81,28 +79,6 @@ class _DetailMuaPageState extends State<DetailMuaPage> {
             ),
           ),
         ));
-  }
-
-  Widget portofolio(BuildContext context) {
-    return Card(
-      child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: mua1.length,
-          itemBuilder: (BuildContext context, int index) {
-            return Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          mua1[index],
-                          fit: BoxFit.cover,
-                        ))
-                  ],
-                ));
-          }),
-    );
   }
 
   Widget aboutMua(BuildContext context, mua) {
