@@ -13,7 +13,7 @@ class ApiMua {
       final List<dynamic> body = jsonDecode(response.body);
       final List<Specialist> specialists =
           body.map((e) => Specialist.fromJson(e)).toList();
-      print(specialists);
+
       return specialists;
     } else {
       throw "Can't get the data";
@@ -24,7 +24,6 @@ class ApiMua {
     final response = await http.get(Uri.parse('$baseUrl$specialists/$id'));
     if (response.statusCode == 200) {
       final dynamic body = jsonDecode(response.body);
-      print('Body: $body');
       final Specialist specialist = Specialist.fromJson(body);
       return specialist;
     } else {

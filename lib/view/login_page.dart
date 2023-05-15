@@ -62,11 +62,11 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 100,
               ),
               textWelcome(context),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               formWidget(context),
               Padding(
                 padding: const EdgeInsets.all(20),
@@ -74,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: MaterialButton(
                       height: 50,
                       minWidth: 150,
-                      color: Color.fromARGB(255, 125, 141, 135),
+                      color: const Color.fromARGB(255, 125, 141, 135),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
                       child: Text(
@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget textWelcome(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(30),
+      padding: const EdgeInsets.all(30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -132,7 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                     fontWeight: FontWeight.w400,
                     color: Colors.black54)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Center(

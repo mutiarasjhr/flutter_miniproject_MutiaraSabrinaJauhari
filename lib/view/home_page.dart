@@ -1,10 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:yourmuaa/view/login_page.dart';
-import 'package:yourmuaa/view/bookingmua.dart';
 import 'package:yourmuaa/view/specialistmua.dart';
 
 class HomePage extends StatefulWidget {
@@ -40,7 +37,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           widgetAkun(context),
-          Padding(padding: EdgeInsets.only(top: 250)),
+          const Padding(padding: EdgeInsets.only(top: 250)),
           SizedBox(
             height: 50,
             width: 180,
@@ -55,7 +52,7 @@ class _HomePageState extends State<HomePage> {
   Widget buttonNext(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-          backgroundColor: Color.fromARGB(255, 125, 141, 135),
+          backgroundColor: const Color.fromARGB(255, 125, 141, 135),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))),
       onPressed: () {
@@ -145,7 +142,7 @@ class BottomBar extends StatelessWidget {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       selectedItemColor: Colors.white,
-      backgroundColor: Color.fromARGB(255, 125, 141, 135),
+      backgroundColor: const Color.fromARGB(255, 125, 141, 135),
       showSelectedLabels: true,
       items: const [
         BottomNavigationBarItem(

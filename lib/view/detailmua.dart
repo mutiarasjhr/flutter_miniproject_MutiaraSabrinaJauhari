@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:yourmuaa/view/bookingmua.dart';
 import 'package:yourmuaa/model/mua.dart';
 import 'package:yourmuaa/view_model/muaprovider.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class DetailMuaPage extends StatefulWidget {
   final int byId;
@@ -83,19 +82,19 @@ class _DetailMuaPageState extends State<DetailMuaPage> {
 
   Widget aboutMua(BuildContext context, mua) {
     return Card(
-      color: Color.fromARGB(255, 233, 237, 236),
+      color: const Color.fromARGB(255, 233, 237, 236),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             mua.name.toString(),
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
-          Text(
+          const Text(
               'Telah Berpengalaman di Bidang Make-Up Artist sejak 5 tahun yang lalu. Dan telah diakui oleh galih Sodiro dan seorang make-Up Artist yangg bersertifikat',
               style: TextStyle(fontSize: 15)),
-          Padding(padding: const EdgeInsets.all(5)),
+          const Padding(padding: EdgeInsets.all(5)),
         ],
       ),
     );
@@ -103,19 +102,20 @@ class _DetailMuaPageState extends State<DetailMuaPage> {
 
   Widget priceList(BuildContext context, mua) {
     return Card(
-      color: Color.fromARGB(255, 233, 237, 236),
+      color: const Color.fromARGB(255, 233, 237, 236),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: ListTile(
         title: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text('Pricelist for Party, Graduation, Engagement',
+            const Text('Pricelist for Party, Graduation, Engagement',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             Text(mua.pricelist.toString(),
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
           ],
         ),
-        subtitle: Column(
+        subtitle: const Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
@@ -134,19 +134,20 @@ class _DetailMuaPageState extends State<DetailMuaPage> {
 
   Widget priceWed(BuildContext context, mua) {
     return Card(
-      color: Color.fromARGB(255, 233, 237, 236),
+      color: const Color.fromARGB(255, 233, 237, 236),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: ListTile(
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Pricelist for Wedding',
+            const Text('Pricelist for Wedding',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             Text(mua.pricelistwed.toString(),
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
           ],
         ),
-        subtitle: Column(
+        subtitle: const Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
@@ -170,7 +171,7 @@ class _DetailMuaPageState extends State<DetailMuaPage> {
   Widget buttonBook(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-          backgroundColor: Color.fromARGB(255, 125, 141, 135),
+          backgroundColor: const Color.fromARGB(255, 125, 141, 135),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))),
       onPressed: () {

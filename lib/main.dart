@@ -4,8 +4,6 @@ import 'package:yourmuaa/view/home_page.dart';
 import 'package:yourmuaa/view/login_page.dart';
 import 'package:provider/provider.dart';
 import 'package:yourmuaa/view_model/muaprovider.dart';
-import 'view/bookingmua.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,9 +20,9 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           routes: {
-            '/': (context) => LoginPage(),
-            '/home': (context) => HomePage(),
-            '/booking': (context) => BookingPage(),
+            '/': (context) => const LoginPage(),
+            '/home': (context) => const HomePage(),
+            '/booking': (context) => const BookingPage(),
             // '/specialist': (context) => SpecialistPage()
           },
         ));

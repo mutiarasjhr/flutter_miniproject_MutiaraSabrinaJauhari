@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:yourmuaa/view/home_page.dart';
-import 'package:yourmuaa/view/specialistmua.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class BookingPage extends StatefulWidget {
   const BookingPage({super.key});
@@ -33,7 +31,7 @@ class _BookingPageState extends State<BookingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 125, 141, 135),
+        backgroundColor: const Color.fromARGB(255, 125, 141, 135),
         title: Text('Booking Your Specialist',
             style: GoogleFonts.aleo(
                 fontSize: 20,
@@ -63,9 +61,9 @@ class _BookingPageState extends State<BookingPage> {
                       borderRadius: BorderRadius.circular(50))),
               onPressed: () {
                 final isValid = formKey.currentState!.validate();
-                String nama = namaController.text;
-                String email = emailController.text;
-                String number = numberController.text;
+                // String nama = namaController.text;
+                // String email = emailController.text;
+                // String number = numberController.text;
                 if (isValid) {
                   _showAlertDialog();
                 }
@@ -75,7 +73,7 @@ class _BookingPageState extends State<BookingPage> {
                 style: GoogleFonts.roboto(
                     fontSize: 25,
                     fontWeight: FontWeight.w300,
-                    color: Color.fromARGB(255, 125, 141, 135)),
+                    color: const Color.fromARGB(255, 125, 141, 135)),
               ),
             ),
           ],
@@ -110,7 +108,7 @@ class _BookingPageState extends State<BookingPage> {
                   style: GoogleFonts.roboto(
                       fontSize: 25,
                       fontWeight: FontWeight.w300,
-                      color: Color.fromARGB(255, 21, 58, 33))),
+                      color: const Color.fromARGB(255, 21, 58, 33))),
             )
           ],
         ),
@@ -121,7 +119,7 @@ class _BookingPageState extends State<BookingPage> {
             style: GoogleFonts.roboto(
                 fontSize: 20,
                 fontWeight: FontWeight.w300,
-                color: Color.fromARGB(255, 51, 90, 64))),
+                color: const Color.fromARGB(255, 51, 90, 64))),
       ],
     );
   }
@@ -348,7 +346,8 @@ class _BookingPageState extends State<BookingPage> {
                     const SizedBox(height: 20),
                     TextButton(
                       style: TextButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 125, 141, 135),
+                          backgroundColor:
+                              const Color.fromARGB(255, 125, 141, 135),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50))),
                       onPressed: () {

@@ -24,7 +24,6 @@ class MuaProvider extends ChangeNotifier {
       final result = await ApiMua.getSpecialist();
       _listmua = result;
       _requestState = RequestState.loaded;
-      print(_listmua);
       notifyListeners();
     } catch (e) {
       _requestState = RequestState.error;
@@ -34,13 +33,11 @@ class MuaProvider extends ChangeNotifier {
   }
 
   Future<void> fetchSingleMua(String id) async {
-    print('call');
     _requestState = RequestState.loading;
     // notifyListeners();
     try {
       final result = await ApiMua.getSpecialistById(id);
       _specialist = result;
-      print('Result: $result');
       _requestState = RequestState.loaded;
       notifyListeners();
     } catch (e) {

@@ -2,8 +2,6 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yourmuaa/view/detailmua.dart';
-import 'package:yourmuaa/api/api_mua.dart';
-import 'package:yourmuaa/model/mua.dart';
 import 'package:yourmuaa/view_model/muaprovider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,7 +13,7 @@ class SpecialistPage extends StatefulWidget {
 }
 
 class _SpecialistPageState extends State<SpecialistPage> {
-  late Future<List<Specialist>> _specialist;
+  // late Future<List<Specialist>> _specialist;
 
   @override
   void initState() {
@@ -29,7 +27,7 @@ class _SpecialistPageState extends State<SpecialistPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 125, 141, 135),
+        backgroundColor: const Color.fromARGB(255, 125, 141, 135),
         title: Text('Spesialist Mua',
             style: GoogleFonts.aleo(
                 fontSize: 30,
@@ -86,7 +84,7 @@ class _SpecialistPageState extends State<SpecialistPage> {
                               SizedBox(
                                 width: 300,
                                 child: Padding(
-                                  padding: EdgeInsets.only(left: 25),
+                                  padding: const EdgeInsets.only(left: 25),
                                   child: Text(
                                     mua.name.toString(),
                                     style: GoogleFonts.roboto(
